@@ -121,6 +121,68 @@
             HideSingle="False"
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="CenterAndExpand" />
+
+        <Label Text="Normal CarouselView" />
+        <CarouselView
+            HeightRequest="130"
+            HorizontalOptions="CenterAndExpand"
+            HorizontalScrollBarVisibility="Never"
+            IndicatorView="indicatorFavourite3"
+            IsBounceEnabled="False"
+            ItemsSource="{Binding MormalMenuItems, Mode=OneWay}">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    SnapPointsAlignment="Center"
+                    SnapPointsType="Mandatory" />
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout
+                        Margin="15,0,15,0"
+                        Spacing="10"
+                        WidthRequest="85">
+                        <Border
+                            Padding="0"
+                            BackgroundColor="Gray"
+                            HorizontalOptions="CenterAndExpand">
+                            <Border.Shadow>
+                                <Shadow
+                                    Brush="black"
+                                    Opacity="0.4"
+                                    Radius="4"
+                                    Offset="0,0" />
+                            </Border.Shadow>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                            <Image
+                                Margin="15"
+                                HeightRequest="35"
+                                HorizontalOptions="Center"
+                                Source="{Binding ImageName}"
+                                VerticalOptions="Center"
+                                WidthRequest="35" />
+                        </Border>
+
+                        <Label
+                            HorizontalOptions="Center"
+                            LineBreakMode="WordWrap"
+                            MaxLines="2"
+                            StyleClass="IconText"
+                            Text="{Binding MenuName}"
+                            VerticalOptions="Center"
+                            WidthRequest="85" />
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView
+            x:Name="indicatorFavourite3"
+            Margin="0,-5,0,10"
+            HideSingle="False"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand" />
     </StackLayout>
 
 </ContentPage>
