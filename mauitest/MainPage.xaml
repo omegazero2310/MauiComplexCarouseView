@@ -90,7 +90,7 @@
             HeightRequest="130"
             HorizontalOptions="CenterAndExpand"
             HorizontalScrollBarVisibility="Never"
-            IndicatorView="indicatorFavourite"
+            IndicatorView="indicatorFavourite2"
             IsBounceEnabled="False"
             ItemsSource="{Binding FavouriteMenuItems, Mode=OneWay}">
             <CarouselView.ItemsLayout>
@@ -116,7 +116,7 @@
             </CarouselView.ItemTemplate>
         </CarouselView>
         <IndicatorView
-            x:Name="indicatorFavourite"
+            x:Name="indicatorFavourite2"
             Margin="0,-5,0,10"
             HideSingle="False"
             HorizontalOptions="CenterAndExpand"
